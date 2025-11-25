@@ -1,3 +1,5 @@
+The ImSwitchOPT fork has been detached on 25/11/2025 from this [snapshot](https://github.com/ImSwitch/ImSwitch/tree/37bf1df6de0ee4746b05bef9684c782e4995b2e8) of the main branch of ImSwitch.
+
 # ImSwitch
 
 [![DOI](https://joss.theoj.org/papers/10.21105/joss.03394/status.svg)](https://doi.org/10.21105/joss.03394)
