@@ -1,5 +1,5 @@
 {
-    "setupFileName": "example_virtual_microscope.json",
+    "setupFileName": "example_OPTFull4Wire.json",
     "recording": {
         "outputFolder": "./ImSwitch/ImSwitch/recordings",
         "includeDateInOutputFolder": true
