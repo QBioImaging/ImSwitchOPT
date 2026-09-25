@@ -47,6 +47,18 @@ set "project_pushed=1"
 if not exist "imswitch\" goto invalid_project
 if not exist "requirements.lock" goto invalid_project
 
+rem Remove repository metadata and documentation to reduce the installation size.
+for %%D in (.git docs) do (
+    if exist "%%D\" (
+        echo Removing %%D...
+        rmdir /s /q "%%D"
+        if exist "%%D\" (
+            echo Error: Could not remove "%%D". >&2
+            goto finish
+        )
+    )
+)
+
 rem Prefer the project's existing environment when one is available.
 if not exist ".venv\Scripts\activate.bat" goto try_launch
 call ".venv\Scripts\activate.bat"

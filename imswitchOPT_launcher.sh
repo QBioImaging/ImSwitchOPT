@@ -37,6 +37,14 @@ if [[ ! -d imswitch || ! -f requirements.lock ]]; then
     exit 1
 fi
 
+# Remove repository metadata and documentation to reduce the installation size.
+for folder in .git docs; do
+    if [[ -d "$folder" ]]; then
+        echo "Removing $folder..."
+        rm -rf -- "$folder"
+    fi
+done
+
 # Prefer the project's existing environment when one is available.
 if [[ -f .venv/bin/activate ]]; then
     source .venv/bin/activate
